@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table tr {
+            width: 100%;
+        }
+
+        table tr th {
+            height: 50px;
+        }
+
+        table tr td {
+            width: 100%;
+            height: 50px;
+            margin: auto;
+        }
+
+        table .btns {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        table tr .align {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        table tr th,
+        td {
+            padding: 12px;
+            margin: auto;
+        }
+
+        table tr th h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.03em;
+        }
+
+        table tr td p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table tr td button {
+            width: 25%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.05em;
+            background-color: rgb(16, 16, 46);
+            border: 1px solid rgb(16, 16, 46);
+            outline: none;
+            margin: 1% auto;
+        }
+
+        table tr td a {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto 1%;
+            background-color: rgb(16, 16, 46);
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font-size: 1.05em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>
+                <h1>LEAVE REQUEST</h1>
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>{name} has requested the leave from {from} to {to}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><b>Reason : </b> {reason}</p>
+            </td>
+        </tr>
+
+        <tr class="btns">
+            <td class="align">
+                <a href="{approve-url}">Approve</a>
+                <a href="{reject-url}">Reject</a>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        let approve = document.getElementById(`approve`);
+        let reject = document.getElementById(`reject`);
+
+        approve.addEventListener('click', () => {
+            console.log(`hi`);
+            window.open(`{approve-url}`);
+        });
+
+        reject.addEventListener('click', () => {
+            window.open(`{reject-url}`);
+        });
+
+    </script>
+
+</body>
+
+</html>
